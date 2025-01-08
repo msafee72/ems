@@ -1,0 +1,61 @@
+{% extends "base_admin.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Add Election</h2>
+    <div class="card shadow-sm mx-auto" style="max-width: 600px; border-radius: 15px;">
+        <div class="card-body p-4">
+            <form action="/add_election" method="POST" class="needs-validation" novalidate>
+                <!-- Election Name -->
+                <div class="form-group mb-3">
+                    <label for="electionName" class="form-label">Election Name:</label>
+                    <input 
+                        type="text" 
+                        class="form-control rounded-pill" 
+                        id="electionName" 
+                        name="electionName" 
+                        placeholder="Enter election name" 
+                        required>
+                    <div class="invalid-feedback">Please enter the election name.</div>
+                </div>
+                <!-- Start Date -->
+                <div class="form-group mb-3">
+                    <label for="startDate" class="form-label">Start Date:</label>
+                    <input 
+                        type="date" 
+                        class="form-control rounded-pill" 
+                        id="startDate" 
+                        name="startDate" 
+                        required>
+                    <div class="invalid-feedback">Please select a start date.</div>
+                </div>
+                <!-- End Date -->
+                <div class="form-group mb-3">
+                    <label for="endDate" class="form-label">End Date:</label>
+                    <input 
+                        type="date" 
+                        class="form-control rounded-pill" 
+                        id="endDate" 
+                        name="endDate" 
+                        required>
+                    <div class="invalid-feedback">Please select an end date.</div>
+                </div>
+                <!-- Description -->
+                <div class="form-group mb-4">
+                    <label for="description" class="form-label">Description:</label>
+                    <textarea 
+                        class="form-control rounded" 
+                        id="description" 
+                        name="description" 
+                        rows="3" 
+                        placeholder="Provide additional details about the election"></textarea>
+                </div>
+                <!-- Submit Button -->
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-lg rounded-pill">Add Election</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

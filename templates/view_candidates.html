@@ -1,0 +1,26 @@
+{% extends "base_admin.html" %}
+
+{% block content %}
+<h1 class="text-center my-4">Registered Candidates</h1>
+<div class="container">
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Name</th>
+                <th>Party</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for candidate in candidates %}
+            <tr>
+                <!-- Check if candidate name, party, and age exist -->
+                <td>{{ candidate.name if candidate.name else "No Name" }}</td>
+                <td>{{ candidate.party if candidate.party else "No Party" }}</td>
+                <td>{{ candidate.age if candidate.age else "N/A" }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

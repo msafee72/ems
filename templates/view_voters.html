@@ -1,0 +1,26 @@
+{% extends "base_admin.html" %}
+
+{% block content %}
+
+<h1 class="text-center mt-4">Registered Voters</h1>
+<div class="container">
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Voter ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for voter in voters %}
+            <tr>
+                <td>{{ voter.name }}</td>
+                <td>{{ voter.age }}</td>
+                <td>{{ voter.voterID }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

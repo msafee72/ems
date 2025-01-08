@@ -26,5 +26,5 @@ The Election Management System (EMS) is a web application designed to streamline
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/ZohaibKhokhar/ems.git
+   git clone https://github.com/msafee72/ems.git
    cd ems
